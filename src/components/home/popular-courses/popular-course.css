@@ -1,0 +1,27 @@
+#courses {
+  padding: 40px 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  padding: 10px 0;
+  color: #333;
+}
+.course__row {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 1000px) {
+  .course__row {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+  }
+}
+@media (max-width: 600px) {
+  .course__row {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+  }
+}

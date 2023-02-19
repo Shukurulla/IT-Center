@@ -1,0 +1,89 @@
+.footer {
+  width: 100%;
+  padding: 40px 0 20px 0;
+  background-color: #7dba28;
+  color: #fff;
+  box-shadow: 1px 1px 10px 10px #d8d8d8;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+}
+.title p {
+  margin-top: 15px;
+}
+.title {
+  width: 24%;
+}
+.footer__navigation {
+  width: 24%;
+}
+.primacy h2 {
+  margin-bottom: 15px;
+}
+.contact h2 {
+  margin-bottom: 15px;
+}
+.footer__navigation ul {
+  margin-top: 15px;
+}
+.footer__navigation ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+.footer__navigation ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+.contact {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+}
+.contact a {
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact a i {
+  font-size: 19px;
+}
+.company {
+  text-align: center;
+  padding: 20px 0 0 0;
+  margin-top: 20px;
+  font-size: 18px;
+  border-top: 1px solid #ffffff6c;
+}
+
+@media (max-width: 750px) {
+  .footer__row {
+    flex-direction: column;
+  }
+  .title {
+    width: 49%;
+  }
+  .footer__row h2 {
+    font-size: 20px;
+  }
+  .footer__row p {
+    font-size: 14px;
+  }
+  .footer__row a {
+    font-size: 14px;
+  }
+  .footer__navigation {
+    width: 49%;
+    margin: 20px 0;
+  }
+  .contact {
+    width: 100%;
+  }
+}

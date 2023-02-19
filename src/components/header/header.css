@@ -1,0 +1,136 @@
+header {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 15px #d1d1d1;
+  z-index: 999;
+}
+
+nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+  height: 70px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.bi-list {
+  display: none;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 30px;
+}
+
+.bi-x-lg {
+  display: none;
+}
+
+.navigation ul li {
+  list-style: none;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  color: #444;
+  transition: 0.4s;
+}
+.navigation ul li a:hover {
+  color: #7dba28;
+}
+
+.navigation ul li a.active {
+  color: #7dba28;
+  font-weight: 500;
+}
+
+@media (max-width: 1050px) {
+  .navigation ul li a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1050px) {
+  .bi-list {
+    display: block;
+    font-size: 19px;
+    cursor: pointer;
+  }
+  .navigation {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5137254902);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transform: translateX(100%);
+    transition: 0.1s;
+    z-index: 999;
+  }
+  .navigation ul {
+    flex-direction: column;
+    align-items: start;
+    width: 30%;
+    background-color: #ffffff;
+    transform: translateX(100%);
+    transition: 0.4s;
+    z-index: 999;
+    height: 100%;
+    padding: 40px;
+    gap: 0;
+    box-shadow: 1px 1px 10px #bbb;
+  }
+  .bi-x-lg {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    font-size: 19px;
+    cursor: pointer;
+    color: #444;
+  }
+  .navigation ul li {
+    margin-top: 30px;
+  }
+  .navigation.active {
+    transform: translateX(0);
+  }
+  .navigation.active ul {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 800px) {
+  .logo {
+    width: 70px;
+    height: 50px;
+  }
+}
+@media (max-width: 520px) {
+  .navigation ul {
+    width: 50%;
+  }
+}
+@media (max-width: 520px) {
+  .navigation ul {
+    width: 100%;
+  }
+}

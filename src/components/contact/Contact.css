@@ -1,0 +1,146 @@
+#contact {
+  padding: 100px 0;
+}
+.contact__row {
+  display: grid;
+  grid-template-columns: 40% 58%;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact__row-left {
+  background-color: #7dba28;
+  padding: 30px;
+  border-radius: 15px;
+}
+.contact__row-left img {
+  width: 100%;
+}
+.contact__title {
+  padding: 10px 0;
+  color: #fff;
+}
+.contact__title h2 {
+  padding-bottom: 10px;
+}
+.contact__footer .contact {
+  width: 100%;
+  margin-top: 15px;
+}
+.contact__footer .contact h2 {
+  color: #fff;
+}
+.contact__icons {
+  padding: 15px 0;
+  display: flex;
+  gap: 15px;
+}
+.contact__icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 45pc;
+  font-size: 19px;
+  color: #7dba28;
+  transition: 0.4s;
+  border: 1px solid #fff;
+}
+.contact__icons a:hover {
+  background-color: #7dba28;
+  color: #fff;
+}
+
+.contact-row-right {
+  background-color: #666;
+  padding: 30px;
+  border-radius: 15px;
+}
+.contact-row-right .input-form {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  padding: 15px 0;
+  gap: 35px;
+}
+.contact-row-right .input-form input {
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.contact-row-right select {
+  visibility: hidden;
+}
+.select__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.contact-info {
+  margin-top: 15px;
+}
+.contact-info ul {
+  padding: 0 15px;
+  background-color: #fff;
+}
+.contact-info ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+
+  border-bottom: 1px solid #a5a2a2;
+}
+.contact-info ul li .item {
+  font-size: 19px;
+  font-weight: 600;
+  color: #444;
+}
+.contact__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.contact__btn button {
+  border: none;
+  border-radius: 5px;
+}
+.select__course {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: #333;
+}
+.select__course li {
+  list-style: none;
+  padding: 5px 15px;
+  font-size: 18px;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+.select__course li:hover {
+  background-color: #e7e5e5;
+}
+.contact-row-right .input-form .input__box {
+  position: relative;
+}
+
+.validate__massage {
+  position: absolute;
+  top: -100%;
+  background-color: #e7e5e5;
+  padding: 5px;
+  color: red;
+}

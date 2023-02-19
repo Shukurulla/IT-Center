@@ -1,0 +1,29 @@
+.card {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 10px #2b2a2a;
+}
+.card .img__box {
+  width: 70px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card .img__box img {
+  width: 100%;
+  height: 100%;
+}
+.card .card__info h1 {
+  font-size: 25px;
+  color: #292828;
+  padding: 10px 0;
+}
+.card .card__info p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
