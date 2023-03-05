@@ -1,26 +1,45 @@
 import React, { useState, useEffect } from "react";
-import Footer from "../footer/Footer";
+import { Link } from "react-router-dom";
+import { useForm } from "@formcarry/react";
 import data from "../CourseData";
 import "./Contact.css";
 import Button from "../button/Button";
-
-const courses = [
-  "Android",
-  "Kompyuter Savodxonligi",
-  "Front End",
-  "IT Matematika",
-  "IT English",
-  "Golang",
-  "Python(Basic + Advanced)",
-  "Grafik Dizayn",
-];
+import Message from "./mesage/Message";
 
 const Contact = () => {
   const [course, setCourse] = useState(0);
   const [termName, setTermName] = useState("");
   const [termNumber, setTermNumber] = useState("");
-  const [validate, setValidate] = useState(false);
+  const [select, setSelect] = useState("Android");
   const [modal, setModal] = useState(false);
+  const { state, submit } = useForm({
+    id: "trNcIlkFVI",
+  });
+
+  const successMsg = {
+    msgClass: "success",
+    img: <i className="bi bi-check2-circle"></i>,
+    status: "Great!",
+    message: "Hodimlarimiz tez orada siz bilan boglanishadi",
+    link: "/",
+    linkMsg: "Bosh sahifaga Qaytish",
+  };
+  const errorMsg = {
+    msgClass: "error",
+    img: <i className="bi bi-x-circle"></i>,
+    status: "Xatolik Bor!",
+    message: "Iltimos malumotlarni tekshirip ko'ring",
+    link: "/contact",
+    linkMsg: "Qayta urunib korish",
+  };
+
+  const [err, setErr] = useState(false);
+
+  if (state.submitted) {
+    return <Message data={successMsg} />;
+  } else if (state.error) {
+    return err ? "" : <Message setErr={setErr} data={errorMsg} />;
+  }
 
   const validateName = (text) => {
     if (text.search(/\d/) >= 0) {
@@ -29,6 +48,7 @@ const Contact = () => {
       return false;
     }
   };
+
   const validateNumber = (text) => {
     if (text.search(/^[0-9]{0,9}$/)) {
       return true;
@@ -46,7 +66,16 @@ const Contact = () => {
   };
 
   const Modal = ({ course, id }) => {
-    return <li onClick={() => selectCourse(id)}>{course}</li>;
+    return (
+      <li
+        onClick={() => {
+          setSelect(course);
+          selectCourse(id);
+        }}
+      >
+        {course}
+      </li>
+    );
   };
 
   return (
@@ -97,12 +126,10 @@ const Contact = () => {
               </div>
             </div>
             <div className="contact-row-right">
-              <form
-                action="https://formcarry.com/s/7CkyfQ1oz"
-                method="POST"
-                accept-charset="UTF-8"
-                className="contact__form"
-              >
+              <div className="contact-header">
+                <h2>Yozilmoqchi bo'lgan kursni belgilang</h2>
+              </div>
+              <form onSubmit={submit} className="contact__form">
                 <div className="input-form">
                   <div className="input__box">
                     {validateName(termName) ? (
@@ -112,10 +139,11 @@ const Contact = () => {
                     ) : null}
                     <input
                       type="text"
+                      required
                       value={termName}
                       onChange={(e) => setTermName(e.target.value)}
                       placeholder="Ismingizni kiriting..."
-                      name="course"
+                      name="name"
                     />
                   </div>
                   <div className="input__box">
@@ -126,21 +154,27 @@ const Contact = () => {
                     ) : null}
                     <input
                       type="text"
+                      required
                       value={termNumber}
                       onChange={(e) => setTermNumber(e.target.value)}
-                      placeholder="Telefon raqam..."
-                      name="number"
+                      placeholder="90 123 45 67"
+                      name="number "
+                    />
+                    <input
+                      type="text"
+                      className="select-course"
+                      value={select}
+                      name="course"
                     />
                   </div>
                 </div>
-                <select value={course}></select>
                 <div className="select__box" onClick={openHandler}>
                   <h4>{data[course].courseName}</h4>
-                  <i class="bi bi-chevron-down"></i>
+                  <i className="bi bi-chevron-down"></i>
                   <ul className="select__course">
-                    {courses.map((item, id) => {
+                    {data.map((item, id) => {
                       return modal ? (
-                        <Modal course={item} id={id} key={id} />
+                        <Modal course={item.courseName} id={id} key={id} />
                       ) : null;
                     })}
                   </ul>
@@ -179,7 +213,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

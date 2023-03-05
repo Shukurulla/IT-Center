@@ -33,6 +33,15 @@ main {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 2000px) {
+  .home__col-left h1 {
+    font-size: 35px;
+  }
+  .home__col-left p {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 1327px) {
   .home__col-left h1 {
     font-size: 30px;
@@ -74,5 +83,10 @@ main {
   .home__col-left {
     width: 100%;
     margin: auto;
+  }
+}
+@media (max-width: 540px) {
+  .section-title {
+    font-size: 13px;
   }
 }

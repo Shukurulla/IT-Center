@@ -1,4 +1,5 @@
 import Button from "../button/Button";
+import img from "../image/home.png";
 import "./home.css";
 
 const Home = () => {
@@ -20,10 +21,7 @@ const Home = () => {
               </div>
             </div>
             <div className="home__col-right">
-              <img
-                src="https://xojelitcenter.netlify.app/image/it%20center-hero.png"
-                alt=""
-              />
+              <img src={img} alt="" />
             </div>
           </div>
         </div>

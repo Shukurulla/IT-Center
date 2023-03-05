@@ -25,3 +25,9 @@
     grid-template-columns: repeat(1, 100%);
   }
 }
+@media (max-width: 540px) {
+  .section-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+}

@@ -2,17 +2,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
 
-export default function Header() {
+export default function Header({ path, onPath, active }) {
   const navItem = ["Bosh Sahifa", "Biz Haqimizda", "Kurslar", "Kontakt"];
-  const [active, setActive] = useState("Bosh Sahifa");
+  const paths = ["/", "/about", "/courses", "/contact"];
   const [modal, setModal] = useState(false);
-  const paths = ["/", "about", "courses", "contact"];
 
-  const onActive = (itemClass) => {
-    setActive(itemClass);
-  };
+  console.log(path);
 
-  const onMenu = () => {
+  const onMenu = ({ path }) => {
     setModal(!modal);
   };
 
@@ -34,8 +31,10 @@ export default function Header() {
                 <li onClick={onMenu} key={item}>
                   <Link
                     to={paths[id]}
-                    onClick={() => onActive(item)}
-                    className={`montserrat ${active == item ? "active" : null}`}
+                    className={`'montserrat' ${
+                      active == id ? "active" : null
+                    } `}
+                    onClick={() => onPath(paths[id])}
                   >
                     {item}
                   </Link>

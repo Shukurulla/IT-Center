@@ -41,8 +41,10 @@ const FaqContent = () => {
       <div className="container">
         <h1 className="section-title">Frequently Asked Questions</h1>
         <div className="faq__row">
-          {faqData.map((item) => {
-            return <Faq question={item.question} answer={item.answer} />;
+          {faqData.map((item, id) => {
+            return (
+              <Faq question={item.question} key={id} answer={item.answer} />
+            );
           })}
         </div>
       </div>

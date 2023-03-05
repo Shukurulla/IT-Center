@@ -7,10 +7,22 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  position: relative;
 }
 
 .container {
   width: 80%;
   margin: auto;
-} /*# sourceMappingURL=app.css.map */
+}
+
+@media (max-width: 2000px) {
+  .card .card__info p {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section-title {
+    font-size: 13px;
+  }
+}

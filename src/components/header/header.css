@@ -1,11 +1,7 @@
 header {
   width: 100%;
-  position: fixed;
   background-color: #fff;
-  top: 0;
-  left: 0;
   box-shadow: 1px 1px 15px #d1d1d1;
-  z-index: 999;
 }
 
 nav {
@@ -60,6 +56,16 @@ nav {
   font-weight: 500;
 }
 
+@media (max-width: 2050px) {
+  .navigation ul li a {
+    font-size: 23px;
+  }
+  .logo {
+    width: 150px;
+    height: 100px;
+  }
+}
+
 @media (max-width: 1050px) {
   .navigation ul li a {
     font-size: 15px;
@@ -81,8 +87,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: end;
-    transform: translateX(100%);
     transition: 0.1s;
+    overflow: hidden;
+    display: none;
     z-index: 999;
   }
   .navigation ul {
@@ -111,7 +118,7 @@ nav {
     margin-top: 30px;
   }
   .navigation.active {
-    transform: translateX(0);
+    display: flex;
   }
   .navigation.active ul {
     transform: translateX(0);

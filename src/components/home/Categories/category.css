@@ -29,7 +29,23 @@
 .category__cards .card p {
   font-size: 13px;
 }
-@media (max-width: 1110px) {
+@media (max-width: 2000px) {
+  .category__title h1 {
+    font-size: 35px;
+  }
+  .category__title p {
+    font-size: 20px;
+  }
+  .category__cards .card h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .category__cards .card p {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 1310px) {
   .category__title p {
     font-size: 14px;
   }

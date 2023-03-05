@@ -84,6 +84,7 @@
   }
   .team .team__img {
     border-radius: 10px;
+    height: 300px;
   }
   .team .team__img .team__social-icons a {
     font-size: 20px;
@@ -111,6 +112,10 @@
     display: grid;
     grid-template-columns: repeat(1, 100%);
     justify-content: space-between;
+  }
+  .team img {
+    object-fit: cover;
+    object-position: 10% 30%;
   }
   .team .team__img .team__social-icons {
     width: 40px;

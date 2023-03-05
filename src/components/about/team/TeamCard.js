@@ -14,13 +14,13 @@ const TeamCard = ({
         <img src={img} />
         <div className="team__social-icons">
           <a href={`tel:${phone}`}>
-            <i class="bi bi-phone"></i>
+            <i className="bi bi-phone"></i>
           </a>
           <a href={instagramLink}>
-            <i class="bi bi-instagram"></i>
+            <i className="bi bi-instagram"></i>
           </a>
           <a href={telegram}>
-            <i class="bi bi-telegram"></i>
+            <i className="bi bi-telegram"></i>
           </a>
         </div>
       </div>

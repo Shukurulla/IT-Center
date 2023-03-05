@@ -9,3 +9,8 @@
   color: #fff;
   cursor: pointer;
 }
+@media (max-width: 2000px) {
+  .button {
+    font-size: 19px;
+  }
+}

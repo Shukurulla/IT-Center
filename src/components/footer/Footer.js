@@ -45,19 +45,19 @@ const Footer = () => {
           <div className="contact">
             <h2>Biz Bilan Bog'lanish</h2>
             <a href="tel:+998901234567">
-              <i class="bi bi-phone"></i> Telefon: +998 91 123 45 67
+              <i className="bi bi-phone"></i> Telefon: +998 91 123 45 67
             </a>
             <a href="mailto:example@gmail.com">
-              <i class="bi bi-envelope"></i> Gmail: example@gmail.com
+              <i className="bi bi-envelope"></i> Gmail: example@gmail.com
             </a>
             <a href="https://goo.gl/maps/Nv1biWyfVKdQWaAr5">
-              <i class="bi bi-geo-alt"></i> Manzil: Pochta Binosi
+              <i className="bi bi-geo-alt"></i> Manzil: Pochta Binosi
             </a>
           </div>
         </div>
 
         <div className="company">
-          <p>Copywrite.IT Center 2023</p>
+          <p>Copywrite.IT Center Mentors Group 2023</p>
         </div>
       </div>
     </footer>

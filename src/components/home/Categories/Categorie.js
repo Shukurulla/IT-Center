@@ -59,6 +59,7 @@ const Categorie = () => {
             {cards.map((item, id) => {
               return (
                 <Card
+                  key={id}
                   img={item.img}
                   title={item.title}
                   description={item.description}

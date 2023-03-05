@@ -17,7 +17,7 @@
   height: 100%;
 }
 .card .card__info h1 {
-  font-size: 25px;
+  font-size: 22px;
   color: #292828;
   padding: 10px 0;
 }
@@ -26,4 +26,7 @@
   font-size: 15px;
   font-weight: 500;
   color: #333;
+}
+
+@media (max-width: 2000px) {
 }
